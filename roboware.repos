@@ -1,0 +1,15 @@
+repositories:
+  # roboware (autoware fork)
+  roboware/roboware_msg:
+    type: git
+    url: https://github.com/hakoroboken/roboware_msg.git
+    version: main
+  roboware/roboware_common:
+    type: git
+    url: https://github.com/hakoroboken/roboware_common.git
+    version: main
+  roboware/roboware_visualizer:
+    type: git
+    url: https://github.com/hakoroboken/roboware_visualizer.git
+    version: main
+  
