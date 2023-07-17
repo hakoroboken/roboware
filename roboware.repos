@@ -1,14 +1,16 @@
 repositories:
-  # roboware (autoware fork)
+  # roboware
   message/roboware_msg:
     type: git
     url: https://github.com/hakoroboken/roboware_msg.git
     version: main
+
   # visualizer
   visualize/ros-foxglove-bridge:
     type: git
     url: https://github.com/hakoroboken/ros-foxglove-bridge.git
     version: main
+
   # sensing
   sensing/urg_node:
     type: git
@@ -18,3 +20,13 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/velodyne.git
     version: ros2
+
+  # localization
+  localization/lidarslam_ros2:
+    type: git
+    url: https://github.com/hakoroboken/lidarslam_ros2.git
+    version: humble
+  localization/ndt_omp_ros2:
+    type: git
+    url: https://github.com/rsasaki0109/ndt_omp_ros2.git
+    version: humble
