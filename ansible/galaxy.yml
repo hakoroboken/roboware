@@ -5,9 +5,10 @@ version: 0.1.0
 readme: README.md
 authors:
   - Kenji Miyake <kenji.miyake@tier4.jp>
+  - Taiga Takano <ttttghghnb554z@outlook.jp>
 
 # Optional
-description: Set up development environment for Autoware
+description: Set up development environment for Roboware
 license:
   - Apache-2.0
 tags:

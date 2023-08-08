@@ -1,0 +1,32 @@
+---
+- name: Download and install Rust
+  shell: |
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  args:
+    creates: "$HOME/.cargo/bin/rustc"
+
+- name: Ensure pip is installed
+  apt:
+    name: python3-pip
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Install colcon-cargo from GitHub
+  pip:
+    name: git+https://github.com/tier4/colcon-cargo.git
+
+- name: Install colcon-ros-cargo from GitHub
+  pip:
+    name: git+https://github.com/colcon/colcon-ros-cargo.git
+
+- name: Clone cargo-ament-build from GitHub
+  git:
+    repo: 'https://github.com/tier4/cargo-ament-build.git'
+    dest: './cargo-ament-build'
+
+- name: Install cargo-ament-build
+  shell: |
+    cd cargo-ament-build
+    cargo install --path .
+  args:
+    chdir: './cargo-ament-build'
