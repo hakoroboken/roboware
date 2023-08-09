@@ -14,10 +14,14 @@
 - name: Install colcon-cargo from GitHub
   pip:
     name: git+https://github.com/tier4/colcon-cargo.git
+    executable: pip3
+    state: latest
 
 - name: Install colcon-ros-cargo from GitHub
   pip:
     name: git+https://github.com/colcon/colcon-ros-cargo.git
+    executable: pip3
+    state: latest
 
 - name: Clone cargo-ament-build from GitHub
   git:
