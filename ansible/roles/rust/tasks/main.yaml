@@ -22,11 +22,13 @@
 - name: Clone cargo-ament-build from GitHub
   git:
     repo: 'https://github.com/tier4/cargo-ament-build.git'
-    dest: './cargo-ament-build'
+    dest: '~/cargo-ament-build'
 
 - name: Install cargo-ament-build
   shell: |
-    cd cargo-ament-build
+    export PATH="$HOME/.cargo/bin:$PATH"
+    cd ~/cargo-ament-build
     cargo install --path .
   args:
-    chdir: './cargo-ament-build'
+    executable: /bin/bash
+
