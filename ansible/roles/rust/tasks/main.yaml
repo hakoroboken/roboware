@@ -14,19 +14,25 @@
 - name: Install colcon-cargo from GitHub
   pip:
     name: git+https://github.com/tier4/colcon-cargo.git
+    executable: pip3
+    state: latest
 
 - name: Install colcon-ros-cargo from GitHub
   pip:
     name: git+https://github.com/colcon/colcon-ros-cargo.git
+    executable: pip3
+    state: latest
 
 - name: Clone cargo-ament-build from GitHub
   git:
     repo: 'https://github.com/tier4/cargo-ament-build.git'
-    dest: './cargo-ament-build'
+    dest: '~/cargo-ament-build'
 
 - name: Install cargo-ament-build
   shell: |
-    cd cargo-ament-build
+    export PATH="$HOME/.cargo/bin:$PATH"
+    cd ~/cargo-ament-build
     cargo install --path .
   args:
-    chdir: './cargo-ament-build'
+    executable: /bin/bash
+
