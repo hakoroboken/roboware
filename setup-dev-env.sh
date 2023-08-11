@@ -9,7 +9,7 @@ SCRIPT_DIR=$(readlink -f "$(dirname "$0")")
 
 # Parse arguments
 args=()
-
+option_yes=true
 option_no_nvidia=true
 
 # Select installation type
