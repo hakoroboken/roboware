@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: make deb pkg
 
 on:
   schedule: # execute every 12 hours
