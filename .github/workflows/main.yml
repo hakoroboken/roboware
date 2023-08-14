@@ -1,9 +1,8 @@
 name: workspace setup
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule: # execute every 12 hours
+    - cron: 0 12 * * *
+  workflow_dispatch:
 
 
 jobs:
@@ -33,6 +32,3 @@ jobs:
         run: |
           . /opt/ros/humble/setup.sh
           colcon build --event-handlers console_cohesion+ --cmake-args -DCMAKE_BUILD_TYPE=Release
-
-
-
