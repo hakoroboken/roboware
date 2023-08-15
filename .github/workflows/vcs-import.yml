@@ -2,13 +2,11 @@ name: vcs-import
 
 on:
   pull_request:
-    branches: [ main ]
   workflow_dispatch:
   push:
-    branches: [ main ]
     
 jobs:
-  build_and_test:
+  vcs-import-test:
     runs-on: ubuntu-22.04
 
     container:

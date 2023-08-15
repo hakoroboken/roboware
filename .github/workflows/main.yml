@@ -4,11 +4,11 @@ on:
     - cron: 0 12 * * *
   workflow_dispatch:
   push:
-    branches: [ main ]
+  pull_request:
 
 
 jobs:
-  build_and_test:
+  env-setup-and-full-build-test:
     runs-on: ubuntu-22.04
 
     steps:
