@@ -1,5 +1,9 @@
 repositories:
   # roboware
+  launch/roboware_launch:
+    type: git
+    url: https://github.com/hakoroboken/roboware_launch.git
+    version: main
   message/roboware_msg:
     type: git
     url: https://github.com/hakoroboken/roboware_msg.git
@@ -36,6 +40,14 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/transport_drivers.git
     version: humble
+  control/safe_smart_controller_gateway:
+    type: git
+    url: https://github.com/hakoroboken/safe_smart_controller_gateway.git
+    version: main
+  control/rc_msg_converter:
+    type: git
+    url: https://github.com/hakoroboken/rc_msg_converter.git
+    version: main
 
   # demo
   demo/mc_test:
