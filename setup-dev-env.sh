@@ -9,8 +9,34 @@ SCRIPT_DIR=$(readlink -f "$(dirname "$0")")
 
 # Parse arguments
 args=()
-option_yes=true
-option_no_nvidia=true
+while [ "$1" != "" ]; do
+    case "$1" in
+    -y)
+        # Use non-interactive mode.
+        option_yes=true
+        ;;
+    -v)
+        # Enable debug outputs.
+        option_verbose=true
+        ;;
+    --no-nvidia)
+        # Disable installation of the NVIDIA-related roles ('cuda' and 'tensorrt').
+        option_no_nvidia=true
+        ;;
+    --no-cuda-drivers)
+        # Disable installation of 'cuda-drivers' in the role 'cuda'.
+        option_no_cuda_drivers=true
+        ;;
+    --runtime)
+        # Disable installation dev package of role 'cuda' and 'tensorrt'.
+        option_runtime=true
+        ;;
+    *)
+        args+=("$1")
+        ;;
+    esac
+    shift
+done
 
 # Select installation type
 target_playbook="autoware.dev_env.universe" # default

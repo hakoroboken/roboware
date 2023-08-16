@@ -17,7 +17,7 @@ jobs:
 
       - name: Run setup script
         run: |
-          ./setup-dev-env.sh
+          ./setup-dev-env.sh -y
 
       - name: Run vcs import
         run: |
