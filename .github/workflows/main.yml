@@ -10,6 +10,9 @@ on:
 jobs:
   env-setup-and-full-build-test:
     runs-on: ubuntu-22.04
+    
+    container:
+        image: ros:humble-ros-base
 
     steps:
       - name: Check out repository
