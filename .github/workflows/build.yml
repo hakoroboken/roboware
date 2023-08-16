@@ -1,0 +1,48 @@
+name: workspace setup
+on:
+  schedule: # execute every 12 hours
+    - cron: 0 12 * * *
+  workflow_dispatch:
+  push:
+  pull_request:
+
+
+jobs:
+  env-full-build-test:
+    runs-on: ubuntu-22.04
+
+    container:
+        image: ros:humble-ros-base
+    steps:
+      - name: Install curl and wget
+        run: apt-get update && apt-get install -y curl wget python3-pip
+
+      - name: Install Rust and Cargo
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: install ament-cargo
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: cargo-ament-build
+          git: https://github.com/tier4/cargo-ament-build.git
+          branch: main
+
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Run vcs import
+        run: |
+          mkdir src
+          vcs import src < roboware.repos
+     
+      - name: Run rosdep install
+        run: |
+          apt-get -y update
+          rosdep update
+          DEBIAN_FRONTEND=noninteractive rosdep install -y --from-paths src --ignore-src --rosdistro humble
+
+      - name: Build
+        run: |
+          . /opt/ros/humble/setup.sh &&
+          . $HOME/.cargo/env &&
+          colcon build --event-handlers console_cohesion+ --cmake-args -DCMAKE_BUILD_TYPE=Release

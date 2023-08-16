@@ -13,17 +13,6 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/manual_mode_common.git
     version: main
-
-  # localization
-  localization/lidarslam_ros2:
-    type: git
-    url: https://github.com/hakoroboken/lidarslam_ros2.git
-    version: humble
-  localization/ndt_omp_ros2:
-    type: git
-    url: https://github.com/rsasaki0109/ndt_omp_ros2.git
-    version: humble
-
   control/safe_smart_controller_gateway:
     type: git
     url: https://github.com/hakoroboken/safe_smart_controller_gateway.git
