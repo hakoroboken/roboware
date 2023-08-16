@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build -t builder ./docker/base
         
     - name: make deb
       run: |
@@ -22,6 +20,7 @@ jobs:
         cd ./docker/make/ &&
         chmod +x ./*.sh && 
         ./run.sh 
+
     - name: Update
       uses: s0/git-publish-subdir-action@develop
       env:

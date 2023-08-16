@@ -1,4 +1,4 @@
-FROM builder
+FROM wamvtan/ros2_pkg_builder as build-stage
 WORKDIR /workspace
 COPY workspace.repos workspace.repos
 RUN vcs import . < workspace.repos
