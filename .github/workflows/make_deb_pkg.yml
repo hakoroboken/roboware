@@ -1,4 +1,4 @@
-name: make deb pkg
+name: make deb pkg main
 
 on:
   schedule: # execute every 12 hours

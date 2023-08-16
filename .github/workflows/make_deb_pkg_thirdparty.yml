@@ -1,4 +1,4 @@
-name: make deb pkg
+name: make deb pkg thirdparty
 
 on:
   schedule: # execute every 12 hours
