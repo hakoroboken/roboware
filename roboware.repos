@@ -4,9 +4,14 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/roboware_launch.git
     version: main
-  message/roboware_msg:
+  # roboware
+  common/roboware_msg:
     type: git
     url: https://github.com/hakoroboken/roboware_msg.git
+    version: main
+  common/manual_mode_common:
+    type: git
+    url: https://github.com/hakoroboken/manual_mode_common.git
     version: main
 
   # visualizer
@@ -47,10 +52,4 @@ repositories:
   control/rc_msg_converter:
     type: git
     url: https://github.com/hakoroboken/rc_msg_converter.git
-    version: main
-
-  # demo
-  demo/mc_test:
-    type: git
-    url: https://github.com/hakoroboken/mc_test.git
     version: main
