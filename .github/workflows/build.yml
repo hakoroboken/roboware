@@ -1,8 +1,5 @@
-name: workspace setup
+name: full build test
 on:
-  schedule: # execute every 12 hours
-    - cron: 0 12 * * *
-  workflow_dispatch:
   push:
   pull_request:
 
@@ -26,6 +23,9 @@ jobs:
           crate: cargo-ament-build
           git: https://github.com/tier4/cargo-ament-build.git
           branch: main
+      - name: install dep2
+        run: |
+          python3 -m pip install git+https://github.com/tier4/colcon-cargo.git git+https://github.com/colcon/colcon-ros-cargo.git
 
       - name: Check out repository
         uses: actions/checkout@v3

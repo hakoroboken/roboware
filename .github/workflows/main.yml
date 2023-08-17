@@ -1,4 +1,4 @@
-name: workspace setup
+name: dev env setup test
 on:
   schedule: # execute every 12 hours
     - cron: 0 12 * * *
@@ -8,11 +8,8 @@ on:
 
 
 jobs:
-  env-setup-and-full-build-test:
+  env-setup-test:
     runs-on: ubuntu-22.04
-    
-    container:
-        image: ros:humble-ros-base
 
     steps:
       - name: Check out repository
@@ -21,3 +18,20 @@ jobs:
       - name: Run setup script
         run: |
           ./setup-dev-env.sh -y
+
+      - name: Run vcs import
+        run: |
+          mkdir src
+          vcs import src < roboware.repos
+     
+      - name: Run rosdep install
+        run: |
+          sudo apt-get -y update
+          rosdep update
+          DEBIAN_FRONTEND=noninteractive rosdep install -y --from-paths src --ignore-src --rosdistro humble
+
+      - name: Build
+        run: |
+          . /opt/ros/humble/setup.sh &&
+          . $HOME/.cargo/env &&
+          colcon build --event-handlers console_cohesion+ --cmake-args -DCMAKE_BUILD_TYPE=Release
