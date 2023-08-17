@@ -1,4 +1,4 @@
-name: workspace setup
+name: full build test
 on:
   schedule: # execute every 12 hours
     - cron: 0 12 * * *
