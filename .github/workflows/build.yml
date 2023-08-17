@@ -37,7 +37,7 @@ jobs:
      
       - name: Run rosdep install
         run: |
-          sudo apt-get -y update
+          apt-get -y update
           rosdep update
           DEBIAN_FRONTEND=noninteractive rosdep install -y --from-paths src --ignore-src --rosdistro humble
 
