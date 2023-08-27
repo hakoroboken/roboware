@@ -1,10 +1,11 @@
 repositories:
-  # roboware
+  # Launch
   launch/roboware_launch:
     type: git
     url: https://github.com/hakoroboken/roboware_launch.git
     version: main
-  # roboware
+
+  # Common
   common/roboware_msg:
     type: git
     url: https://github.com/hakoroboken/roboware_msg.git
@@ -13,6 +14,8 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/manual_mode_common.git
     version: main
+
+  # Control
   control/safe_smart_controller_gateway:
     type: git
     url: https://github.com/hakoroboken/safe_smart_controller_gateway.git
@@ -20,4 +23,10 @@ repositories:
   control/rc_msg_converter:
     type: git
     url: https://github.com/hakoroboken/rc_msg_converter.git
+    version: main
+
+  # Simulator
+  simulator/p_sim:
+    type: git
+    url: https://github.com/hakoroboken/p_sim.git
     version: main
