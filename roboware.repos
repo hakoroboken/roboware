@@ -16,6 +16,10 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/motor_control_common.git
     version: main
+  mdc_transporter:
+    type: git
+    url: https://github.com/hakoroboken/mdc_transporter.git
+    version: main
 
   safe_smart_controller_gateway:
     type: git
