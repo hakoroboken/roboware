@@ -34,3 +34,8 @@ repositories:
     type: git
     url: https://github.com/hakoroboken/p_sim.git
     version: main
+
+  safe_serial_bridge:
+    type:git
+    url: https://github.com/hakoroboken/safe_serial_bridge.git
+    version: main
