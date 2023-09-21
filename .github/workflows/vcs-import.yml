@@ -2,8 +2,10 @@ name: vcs-import
 
 on:
   pull_request:
-  workflow_dispatch:
+    branches: [ main ]
   push:
+    branches: [ main ]
+    
     
 jobs:
   vcs-import-test:
