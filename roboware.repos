@@ -23,7 +23,7 @@ repositories:
 
   safe_smart_controller_gateway:
     type: git
-    url: https://github.com/roboware-org/safe_smart_controller_gateway.git
+    url: https://github.com/TakanoTaiga/safe_smart_controller_gateway.git
     version: main
   rc_msg_converter:
     type: git
