@@ -1,41 +1,41 @@
 repositories:
   roboware_launch:
     type: git
-    url: https://github.com/hakoroboken/roboware_launch.git
+    url: https://github.com/roboware-org/roboware_launch.git
     version: main
 
   roboware_msg:
     type: git
-    url: https://github.com/hakoroboken/roboware_msg.git
+    url: https://github.com/roboware-org/roboware_msg.git
     version: main
   manual_mode_common:
     type: git
-    url: https://github.com/hakoroboken/manual_mode_common.git
+    url: https://github.com/roboware-org/manual_mode_common.git
     version: main
   motor_control_common:
     type: git
-    url: https://github.com/hakoroboken/motor_control_common.git
+    url: https://github.com/roboware-org/motor_control_common.git
     version: main
   mdc_transporter:
     type: git
-    url: https://github.com/hakoroboken/mdc_transporter.git
+    url: https://github.com/roboware-org/mdc_transporter.git
     version: main
 
   safe_smart_controller_gateway:
     type: git
-    url: https://github.com/hakoroboken/safe_smart_controller_gateway.git
+    url: https://github.com/roboware-org/safe_smart_controller_gateway.git
     version: main
   rc_msg_converter:
     type: git
-    url: https://github.com/hakoroboken/rc_msg_converter.git
+    url: https://github.com/roboware-org/rc_msg_converter.git
     version: main
 
   p_sim:
     type: git
-    url: https://github.com/hakoroboken/p_sim.git
+    url: https://github.com/roboware-org/p_sim.git
     version: main
 
   safe_serial_bridge:
     type: git
-    url: https://github.com/hakoroboken/safe_serial_bridge.git
+    url: https://github.com/roboware-org/safe_serial_bridge.git
     version: main
