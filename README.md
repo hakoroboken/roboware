@@ -1,3 +1,3 @@
 ![logo](./pic/slim_logo.png)
 
-Docs: https://hakoroboken.github.io/roboware_docs/
+Docs: https://roboware-org.github.io/roboware_docs/
