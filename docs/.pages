@@ -1,0 +1,10 @@
+nav:
+    - Introduction: index.md
+    - Install: installation
+    - Tutorials: tutorials
+    - Design: design
+    - Package Reference: packages
+    - Message Reference: message
+    - Library Reference: library
+    - CI Reference: ci
+    - Contibuting: contibuting
