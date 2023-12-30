@@ -1,0 +1,5 @@
+nav:
+    - wheel : wheel_parameter.md
+    - scgw : scgw_parameter.md
+    - serial bridge : serial_bridge_parameter.md
+    - machine : machine_parameter.md
