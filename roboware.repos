@@ -3,7 +3,3 @@ repositories:
     type: git
     url: https://github.com/roboware-org/roboware.universe.git
     version: main
-  safe_smart_controller_gateway:
-    type: git
-    url: https://github.com/TakanoTaiga/safe_smart_controller_gateway.git
-    version: main
